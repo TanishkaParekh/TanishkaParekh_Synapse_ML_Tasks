@@ -1,6 +1,5 @@
 from itertools import *
 
-
 Pokedex = {
 "Pikachu": ("Electric",),
 "Charizard": ("Fire", "Flying"),
@@ -13,7 +12,7 @@ Pokedex = {
 "Gengar": ("Ghost", "Poison"),
 "Onix": ("Rock", "Ground")
 }
-
+k = int(input("Enter number of Pokemons you can use "))
 # what we do :
 #IITERATION 1
 """
@@ -25,12 +24,7 @@ Pokedex = {
 """
     1)  we choose the best pokemon , add it to a list and count & store its powers into a set 
     2)  we will iterate through the list again to find another pokemon that will add maximum number of unique powers and add those into the set as well ( x this process will be done k-1 times
-        
-
 """
-k = int(input("Enter number of Pokemons you can use "))
-
-
 dream_team = []
 total_powers = set()
 #number of pokemon to be selected
@@ -47,7 +41,7 @@ for i in range(k):
             num_powers = poke_pwr
             best_pokemon = pokemon
             
-    
+    #adding it to our team
     dream_team.append(best_pokemon)
     total_powers.update(Pokedex[best_pokemon])
 print(f"The one of the strongest team of {k} pokemons have {len(total_powers)} powers")
